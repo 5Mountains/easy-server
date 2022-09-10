@@ -1,0 +1,22 @@
+{
+  "name": "easy-server",
+  "version": "1.0.0",
+  "description": "Easy server",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "author": "5Mountains",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.2",
+    "env": "^0.0.2",
+    "express": "^4.18.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
