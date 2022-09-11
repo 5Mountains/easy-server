@@ -1,7 +1,5 @@
 node_modules/
+logs/
+database/
 
 .env
-
-logs/
-
-database/

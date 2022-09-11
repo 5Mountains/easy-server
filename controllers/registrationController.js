@@ -19,7 +19,7 @@ const newUserHandler = async (req, res) => {
       .json({ success: false, message: "Username and password are required." });
   }
 
-  const duplicate = usersDB.users.find((person) => (person.username = user));
+  const duplicate = usersDB.users.find((person) => person.username === user);
   if (duplicate) {
     return res.status(400).json({
       success: false,
