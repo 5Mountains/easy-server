@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const { v4: uuidv4 } = require("uuid");
 
 const usersDB = {
-  users: require("../model/users.json"),
+  users: require("../database/users.json"),
   setUsers: function (data) {
     this.users = data;
   },
@@ -39,7 +39,7 @@ const newUserHandler = async (req, res) => {
     usersDB.setUsers([...usersDB.users, newUser]);
 
     await fsPromises.writeFile(
-      path.join(__dirname, "..", "model", "users.json"),
+      path.join(__dirname, "..", "database", "users.json"),
       JSON.stringify(usersDB.users)
     );
 
