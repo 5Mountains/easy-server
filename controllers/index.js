@@ -1,3 +1,4 @@
 const newUserHandler = require("./registrationController");
+const loginHandler = require("./authenticationController");
 
-module.exports = { newUserHandler };
+module.exports = { newUserHandler, loginHandler };
