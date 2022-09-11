@@ -1,7 +1,7 @@
-const { eventLogger } = require("./eventLogger");
+const eventLogger = require("./eventLogger");
 
 const errorHandler = (err, req, res, next) => {
-  logEvents(`${err.name}: ${err.message}`, "errLog.txt");
+  eventLogger(`${err.name}: ${err.message}`, "errorsLog.txt");
   console.error(err);
   res.status(500).send(err.message);
 };
