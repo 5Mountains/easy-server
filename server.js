@@ -12,6 +12,12 @@ app.use(express.json());
 
 app.use(logHandler);
 
+app.use("/registration", require("./routes/api/registration"));
+
+app.all("*", (req, res) => {
+  res.status(404).json({ message: "404 Not Found" });
+});
+
 app.use(errorHandler);
 
 app.listen(PORT, () =>
