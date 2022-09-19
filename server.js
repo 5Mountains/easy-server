@@ -1,5 +1,8 @@
 require("dotenv").config();
 
+const Datastore = require("nedb-promises");
+const datastore = Datastore.create("./database/db.db");
+
 const express = require("express");
 const cors = require("cors");
 const { logHandler, errorHandler, jwtHandler } = require("./middleware");
